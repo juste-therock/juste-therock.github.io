@@ -16,13 +16,14 @@
 }
 
 body{
-  background:#0f172a;
+  background:#007bff;
   color:#fff;
   overflow-x:hidden;
 }
 
 /* NAVBAR */
 nav{
+  background: #0f172a;
   position:fixed;
   width:100%;
   top:0;
@@ -67,7 +68,7 @@ nav a:hover{
 }
 
 .hero span{
-  color:#38bdf8;
+  color:rgba(1, 1, 26, 0.467);
 }
 
 .hero p{
@@ -214,6 +215,10 @@ footer{
   animation-delay: 3s; /* 3-second delay before the first loop starts */
 }
 
+.marquee {
+  color: #fff;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); /* Adjust as needed for content width */ }
@@ -234,34 +239,20 @@ footer{
 
 <section class="hero" id="home">
   <h3>Hi, I am <span id="typing"></span> I am a developer</h3>
-  <div class="marquee-container"><span><p>web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
+  <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
   <a href="#projects"><button class="btn">View Projects</button></a>
 </section>
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="slider">
-      <div class="slides" id="slides">
-        <div class="slide">
-          <h3>Project One</h3>
-          <p>Modern responsive website design.</p>
-        </div>
-        <div class="slide">
-          <h3>Project Two</h3>
-          <p>Creative mobile app interface.</p>
-        </div>
-        <div class="slide">
-          <h3>Project Three</h3>
-          <p>Full-stack web application.</p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="buttons">
-      <button onclick="prevSlide()">Prev</button>
-      <button onclick="nextSlide()">Next</button>
-    </div>
-  </section>
+    <ul> <p> Here go some of my projects : </p> 
+      <li>Pharmabel was my first website, built in 2016 for a pharmacy in Benin.
+        <br/ >
+        Visit <a href="http://pharmabel.com/" target="_blank"> Pharmabel </a>
+      </li>
+    </ul>
+    <br /><br /><br />
+</section>
 
 <section id="pricings">
     <h2>Pricings</h2>
@@ -278,7 +269,7 @@ footer{
 </section>
 
 <footer>
-  © 2026 Memphis | All Rights Reserved
+  © 2026 Juste Memphis Ahouansou | All Rights Reserved
 </footer>
 
 <script>
