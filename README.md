@@ -1,1 +1,1 @@
-This website tells about my sjikks
+This website tells about my skills
