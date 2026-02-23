@@ -16,17 +16,20 @@
 }
 
 body{
-  background:#0461c5;
-  color:#fff;
+  background:#fff;
+  color:#2a5298;
   overflow-x:hidden;
 }
-.body {
+.content-link {
+  color:#2a5298;
+}
+.content-link:hover {
   color:orange;
 }
 
 /* NAVBAR */
 nav{
-  background: #0f172a;
+  background: #fff;
   position:fixed;
   width:100%;
   top:0;
@@ -37,23 +40,33 @@ nav{
   align-items:center;
   transition:0.4s;
   z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
 nav.scrolled{
-  background:#0f172a;
+  background:#fff;
   box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
 nav a{
   color:#fff;
+  background-color: #2a5298;
   text-decoration:none;
   margin-left:20px;
   font-weight:500;
   transition:0.3s;
+  border-radius:30px;
+  padding:8px 20px;
 }
 
 nav a:hover{
-  color:#38bdf8;
+  color:#fff;
+  background-color: orange;
+}
+
+.nav-link.active{
+  color:#fff;
+  background-color: grey;
 }
 
 /* HERO */
@@ -83,7 +96,7 @@ nav a:hover{
 .btn{
   margin-top:25px;
   padding:12px 30px;
-  background:#38bdf8;
+  background:#2a5298;
   border:none;
   color:#fff;
   cursor:pointer;
@@ -92,7 +105,8 @@ nav a:hover{
 }
 
 .btn:hover{
-  background:#0ea5e9;
+  background:#05265e;
+  color: #fff;
   transform:scale(1.05);
 }
 
@@ -108,9 +122,14 @@ section h2{
 }
 
 /* PROJECTS */
-.projects {
-  padding: 80px 0;
-  text-align: center;
+.content {
+  background:beige;
+  width: auto;
+  color: rgb(61, 53, 53);
+  margin: 20px;
+  padding: 30px 20px;
+  border-radius:15px;
+  text-align: justify;
 }
 
 /* SLIDERS */
@@ -191,6 +210,7 @@ section h2{
 
 /* FOOTER */
 footer{
+  color: #fff;
   text-align:center;
   padding:20px;
   background:#1e293b;
@@ -222,6 +242,10 @@ footer{
   color: #fff;
 }
 
+#navbar h3{
+  color: #2a5298;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); /* Adjust as needed for content width */ }
@@ -233,49 +257,49 @@ footer{
 <nav id="navbar">
   <h3>Memphis Ametovena</h3>
   <div>
-    <a href="#home">Accueil</a>
-    <a href="#projects">Projets</a>
-    <a href="#pricings">Facturation</a>
-    <a href="#contact">Contact</a>
+    <a href="#home" class="nav-link">Accueil</a>
+    <a href="#projects" class="nav-link">Projets</a>
+    <a href="#pricings" class="nav-link">Facturation</a>
+    <a href="#contact" class="nav-link">Contact</a>
   </div>
 </nav>
 
 <section class="hero" id="home">
   <h3>Salut, je suis <span id="typing"></span> Je suis programmeur</h3>
   <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
-  <a href="#projects"><button class="btn">Voir Projets</button></a>
+  <a href="#projects"><button class="btn"><b>Voir Projets</b></button></a>
 </section>
-
 <section id="projects">
-    <h2>Projets</h2>
-    <ul> <p> Ici, je vous présente quelques-uns de mes projets : </p> 
-      <li>Pharmabel fut mon premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
+    <h3>Projets</h3>
+    <div class="content"> <p> Ici, je vous présente rapidement quelques-uns de mes projets : </p> 
+      <ul><li>Pharmabel fut mon premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
         <br />
-        Visitez <a href="http://pharmabel.com/" class="body" target="_blank"> Pharmabel </a>
+        Visitez <a href="http://pharmabel.com/" class="content-link" target="_blank"> Pharmabel </a>
       </li>
-    </ul>
-    <li>J'ai contribué quelques années plus tard au design de <a href="https://github.com/juste-therock/" class="body" target="_blank">Science Office</a>, une application web de... </li>
+    
+
+    <li>J'ai contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne. </li>
     <li>J'ai récemment développé et déployé un système complet de gestion micro-finance en Laravel. Projet web ayant servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
-      ✅ Système sécurisé avec login et dashboard. <br />
-      ✅ Architecture MVC. <br />
-      ✅ MySQL. <br />
-      ✅ logique métier personnalisé. <br />
-      ✅ Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/" class="body" target="_blank"> https://juste-therock.github.io/#projects </a><br />
-      ✅ Démonstration disponible sur demande</li>
-    <br /><br /><br />
+      <b>=></b>Système sécurisé avec login et dashboard. <br />
+      <b>=></b> Architecture MVC. <br />
+      <b>=></b> MySQL. <br />
+      <b>=></b> logique métier personnalisé. <br />
+      <b>=></b> Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank"> https://juste-therock.github.io/#projects </a><br />
+      <b>=></b>Démonstration disponible sur demande</li>
+    </ul>
+    <br /></div><br /><br />
 </section>
 
 <section id="pricings">
-    <h2>Facturation</h2>
+<h3>Facturation</h3>
     <div class="pricings">
       <div class="card">Prix 1</div>
       <div class="card">Prix 2</div>
       <div class="card"> Prix 3</div>
     </div>
   </section>
-
-<section id="contact" class="contact">
-  <h2>Contactez-moi</h2>
+<section id="contact" class="contact"> 
+  <h3>Contactez-moi</h3>
   <p>Email: juste@menelic.com</p>
 </section>
 
@@ -321,6 +345,17 @@ document.querySelectorAll("nav a").forEach(anchor=>{
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior:"smooth"
     });
+  });
+});
+
+// ACTIVE LINK COLOR
+const navLink = document.querySelectorAll('.nav-link');
+navLink.forEach(link => {
+  link.addEventListener('click', () => {
+    // supprimer la classe active de tous les liens
+    navLink.forEach(l => l.classList.remove('active'));
+    // ajouter la classe active au lien cliqué
+    link.classList.add('active');
   });
 });
 
