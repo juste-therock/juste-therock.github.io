@@ -65,8 +65,8 @@ nav a:hover{
 }
 
 .nav-link.active{
-  color:#fff;
-  background-color: grey;
+  color:#2a5298;
+  background-color: beige;
 }
 
 /* HERO */
@@ -77,6 +77,8 @@ nav a:hover{
   align-items:center;
   flex-direction:column;
   text-align:center;
+  background-color: #2a5298;
+  color: #fff;
 }
 
 .hero h1{
@@ -91,6 +93,23 @@ nav a:hover{
   margin-top:15px;
   font-size:1.2rem;
   opacity:0.8;
+}
+
+.btn-home{
+  margin-top:25px;
+  padding:12px 30px;
+  background:#fff;
+  border:none;
+  color:#2a5298;
+  cursor:pointer;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+.btn-home:hover{
+  background:orange;
+  color: #fff;
+  transform:scale(1.05);
 }
 
 .btn{
@@ -123,12 +142,13 @@ section h2{
 
 /* PROJECTS */
 .content {
-  background:beige;
+  background:white;
   width: auto;
   color: rgb(61, 53, 53);
   margin: 20px;
-  padding: 30px 20px;
+  padding: 20px 25px;
   border-radius:15px;
+  border: 1px solid gray;
   text-align: justify;
 }
 
@@ -239,11 +259,37 @@ footer{
 }
 
 .marquee {
-  color: #2a5298;
+  color: #fff;
 }
 
 #navbar h3{
   color: #2a5298;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.skills {
+    color: #fff;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-radius:30px;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
 }
 
 @keyframes marquee {
@@ -267,7 +313,10 @@ footer{
 <section class="hero" id="home">
   <h3>Salut, je suis <span id="typing"></span> Je suis programmeur</h3>
   <div class="marquee-container"><span><p class="marquee"><b>web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </b></p></span></div>
-  <a href="#projects"><button class="btn"><b>Voir Projets</b></button></a>
+  <br />
+  <a href="#projects"><button class="btn-home"><b>Voir Projets</b></button></a>
+  <br />
+  <span><p class="skills"><b> HTML | CSS | JavaScript | PHP | PYTHON | MSQL | LARAVEL | WordPress  </b></p></span>
 </section>
 <section id="projects">
     <h3>Projets</h3>
@@ -278,16 +327,17 @@ footer{
       </li>
     
 
-    <li>J'ai contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne. </li>
-    <li>J'ai récemment développé et déployé un système complet de gestion micro-finance en Laravel. Projet web ayant servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
+    <li>J'ai contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne pour le compte de la Chine. </li>
+    <li>J'ai récemment développé et déployé, un système de gestion des clients d'une micro-finance en Laravel. Projet web ayant servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
       <b>=></b>Système sécurisé avec login et dashboard. <br />
       <b>=></b> Architecture MVC. <br />
       <b>=></b> MySQL. <br />
       <b>=></b> logique métier personnalisé. <br />
       <b>=></b> Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank"> https://juste-therock.github.io/#projects </a><br />
       <b>=></b>Démonstration disponible sur demande</li>
+      <li>Je travaille actuellent sur mon yellow pages...</li>
     </ul>
-    <br /></div><br /><br />
+    <br /></div>
 </section>
 
 <section id="pricings">
@@ -301,6 +351,26 @@ footer{
 <section id="contact" class="contact"> 
   <h3>Contactez-moi</h3>
   <p>Email: juste@menelic.com</p>
+  <div class="content"><div class="contact-container">
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Addresse Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">votre Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button class="btn" type="submit">Envoyer Message</button>
+
+    </form></div>
 </section>
 
 <footer>
