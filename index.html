@@ -16,9 +16,12 @@
 }
 
 body{
-  background:#007bff;
+  background:#0461c5;
   color:#fff;
   overflow-x:hidden;
+}
+.body {
+  color:orange;
 }
 
 /* NAVBAR */
@@ -230,46 +233,54 @@ footer{
 <nav id="navbar">
   <h3>Memphis Ametovena</h3>
   <div>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#pricings">Pricings</a>
+    <a href="#home">Accueil</a>
+    <a href="#projects">Projets</a>
+    <a href="#pricings">Facturation</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <section class="hero" id="home">
-  <h3>Hi, I am <span id="typing"></span> I am a developer</h3>
+  <h3>Salut, je suis <span id="typing"></span> Je suis programmeur</h3>
   <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
-  <a href="#projects"><button class="btn">View Projects</button></a>
+  <a href="#projects"><button class="btn">Voir Projets</button></a>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <ul> <p> Here go some of my projects : </p> 
-      <li>Pharmabel was my first website, built in 2016 for a pharmacy in Benin.
-        <br/ >
-        Visit <a href="http://pharmabel.com/" target="_blank"> Pharmabel </a>
+    <h2>Projets</h2>
+    <ul> <p> Ici, je vous présente quelques-uns de mes projets : </p> 
+      <li>Pharmabel fut mon premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
+        <br />
+        Visitez <a href="http://pharmabel.com/" class="body" target="_blank"> Pharmabel </a>
       </li>
     </ul>
+    <li>J'ai contribué quelques années plus tard au design de <a href="https://github.com/juste-therock/" class="body" target="_blank">Science Office</a>, une application web de... </li>
+    <li>J'ai récemment développé et déployé un système complet de gestion micro-finance en Laravel. Projet web ayant servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
+      ✅ Système sécurisé avec login et dashboard. <br />
+      ✅ Architecture MVC. <br />
+      ✅ MySQL. <br />
+      ✅ logique métier personnalisé. <br />
+      ✅ Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/" class="body" target="_blank"> https://juste-therock.github.io/#projects </a><br />
+      ✅ Démonstration disponible sur demande</li>
     <br /><br /><br />
 </section>
 
 <section id="pricings">
-    <h2>Pricings</h2>
+    <h2>Facturation</h2>
     <div class="pricings">
-      <div class="card">Pro 1</div>
-      <div class="card">Pro 2</div>
-      <div class="card">Pro 3</div>
+      <div class="card">Prix 1</div>
+      <div class="card">Prix 2</div>
+      <div class="card"> Prix 3</div>
     </div>
   </section>
 
 <section id="contact" class="contact">
-  <h2>Contact me</h2>
+  <h2>Contactez-moi</h2>
   <p>Email: juste@menelic.com</p>
 </section>
 
 <footer>
-  © 2026 Juste Memphis Ahouansou | All Rights Reserved
+  © 2026 Juste Memphis Ahouansou | Tous droits réservés.
 </footer>
 
 <script>
