@@ -86,7 +86,7 @@ nav a:hover{
 }
 
 .hero span{
-  color:rgba(1, 1, 26, 0.467);
+  color:white;
 }
 
 .hero p{
@@ -143,13 +143,15 @@ section h2{
 /* PROJECTS */
 .content {
   background:white;
-  width: auto;
+  width:100%;
   color: rgb(61, 53, 53);
   margin: 20px;
   padding: 20px 25px;
   border-radius:15px;
   border: 1px solid gray;
   text-align: justify;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-size: medium;
 }
 
 /* SLIDERS */
@@ -234,6 +236,7 @@ footer{
   text-align:center;
   padding:20px;
   background:#080e16;
+  height:30vh;
 }
 
 /* ANIMATION CLASS */
@@ -286,6 +289,22 @@ textarea {
     font-size: 14px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #2a5298;
+    color:white;
+}
+
 input:focus,
 textarea:focus {
     outline: none;
@@ -311,12 +330,12 @@ textarea:focus {
 </nav>
 
 <section class="hero" id="home">
-  <h3>Salut, je suis <span id="typing"></span> Je suis programmeur</h3>
-  <div class="marquee-container"><span><p class="marquee"><b>web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </b></p></span></div>
+  <p>Salut, je suis <span id="typing"></span> Je suis programmeur</P>
+  <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
   <br />
-  <a href="#projects"><button class="btn-home"><b>Voir Projets</b></button></a>
+  <a href="#projects"><button class="btn-home">Voir Projets</button></a>
   <br />
-  <span><p class="skills"><b> HTML | CSS | JavaScript | PHP | PYTHON | MSQL | LARAVEL | WordPress  </b></p></span>
+  <span><p class="skills"> HTML | CSS | JavaScript | PHP | PYTHON | JAVA | MSQL | LARAVEL | WordPress </p></span>
 </section>
 <section id="projects">
     <h3>Projets</h3>
@@ -342,10 +361,39 @@ textarea:focus {
 
 <section id="pricings">
 <h3>Facturation</h3>
-    <div class="pricings">
-      <div class="card">Prix 1</div>
-      <div class="card">Prix 2</div>
-      <div class="card"> Prix 3</div>
+    <div class="content">
+      <div class="pricings">
+        <table>
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Description</th>
+              <th>Tarifs</th>
+              <th>Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Site web de base</td>
+              <td>Conception et développement d'un site web de 5 pages</td>
+              <td>150 OOO FCFA</td>
+              <td>2 semaines de travail, 1 an de maintenance</td>
+            </tr>
+            <tr>
+              <td>Site web premium</td>
+              <td>Conception et développement d'un site web de 10 pages avec é-commerce</td>
+              <td>500 OOO FCFA</td>
+              <td>4 semaines de travail, 2 an de maintenance</td>
+            </tr>
+            <tr>
+              <td>Application web sur mesure</td>
+              <td>Conception et développement d'une application web personnalisée</td>
+              <td>800 OOO FCFA</td>
+              <td>8 semaines de travail, 1 an de maintenance</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
     </div>
   </section>
 <section id="contact" class="contact"> 
