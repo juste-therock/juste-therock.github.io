@@ -1,379 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memphis Software</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memphis Software</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-body{
-  background:#fff;
-  color:#2a5298;
-  overflow-x:hidden;
-}
-.content-link {
-  color:#2a5298;
-}
-.content-link:hover {
-  color:orange;
-}
+    body {
+      background: #fff;
+      color: #2a5298;
+      overflow-x: hidden;
+    }
 
-/* NAVBAR */
-nav{
-  background: #fff;
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
-  padding:20px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  transition:0.4s;
-  z-index:1000;
-  box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
+    .content-link {
+      color: #2a5298;
+    }
 
-nav.scrolled{
-  background:#fff;
-  box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
+    .content-link:hover {
+      color: orange;
+    }
 
-nav a{
-  color:#fff;
-  background-color: #2a5298;
-  text-decoration:none;
-  margin-left:20px;
-  font-weight:500;
-  transition:0.3s;
-  border-radius:30px;
-  padding:8px 20px;
-}
+    /* NAVBAR */
+    nav {
+      background: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.4s;
+      z-index: 1000;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
 
-nav a:hover{
-  color:#fff;
-  background-color: orange;
-}
+    nav.scrolled {
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
 
-.nav-link.active{
-  color:#2a5298;
-  background-color: beige;
-}
+    nav a {
+      color: #fff;
+      background-color: #2a5298;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+      border-radius: 30px;
+      padding: 8px 20px;
+    }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  text-align:center;
-  background-color: #2a5298;
-  color: #fff;
-}
+    nav a:hover {
+      color: #fff;
+      background-color: orange;
+    }
 
-.hero h1{
-  font-size:3rem;
-}
+    .nav-link.active {
+      color: #2a5298;
+      background-color: beige;
+    }
 
-.hero span{
-  color:white;
-}
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background-color: #2a5298;
+      color: #fff;
+    }
 
-.hero p{
-  margin-top:15px;
-  font-size:1.2rem;
-  opacity:0.8;
-}
+    .hero h1 {
+      font-size: 3rem;
+    }
 
-.btn-home{
-  margin-top:25px;
-  padding:12px 30px;
-  background:#fff;
-  border:none;
-  color:#2a5298;
-  cursor:pointer;
-  border-radius:30px;
-  transition:0.3s;
-}
+    .hero span {
+      color: white;
+    }
 
-.btn-home:hover{
-  background:orange;
-  color: #fff;
-  transform:scale(1.05);
-}
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
 
-.btn{
-  margin-top:25px;
-  padding:12px 30px;
-  background:#2a5298;
-  border:none;
-  color:#fff;
-  cursor:pointer;
-  border-radius:30px;
-  transition:0.3s;
-}
+    .btn-home {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #fff;
+      border: none;
+      color: #2a5298;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
 
-.btn:hover{
-  background:#05265e;
-  color: #fff;
-  transform:scale(1.05);
-}
+    .btn-home:hover {
+      background: orange;
+      color: #fff;
+      transform: scale(1.05);
+    }
 
-/* SECTIONS */
-section{
-  padding:100px 10%;
-}
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #2a5298;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
 
-section h2{
-  text-align:center;
-  margin-bottom:50px;
-  font-size:2.5rem;
-}
+    .btn:hover {
+      background: #05265e;
+      color: #fff;
+      transform: scale(1.05);
+    }
 
-/* PROJECTS */
-.content {
-  background:white;
-  width:100%;
-  color: rgb(61, 53, 53);
-  margin: 20px;
-  margin-left: 0px;
-  padding: 20px 25px;
-  border-radius:15px;
-  border: 1px solid gray;
-  text-align: justify;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-  font-size: medium;
-}
+    /* SECTIONS */
+    section {
+      padding: 100px 10%;
+    }
 
-/* SLIDERS */
-.slider {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
+    section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+    /* PROJECTS */
+    .content {
+      background: white;
+      width: 100%;
+      color: rgb(61, 53, 53);
+      margin: 20px;
+      margin-left: 0px;
+      padding: 20px 25px;
+      border-radius: 15px;
+      border: 1px solid gray;
+      text-align: justify;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: medium;
+    }
 
-.slide {
-  min-width: 100%;
-  padding: 40px;
-  background: #1e293b;
-  border-radius: 20px;
-}
+    /* SLIDERS */
+    .slider {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
-.slide h3 {
-  margin-bottom: 15px;
-  color: #38bdf8;
-}
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-.buttons {
-  margin-top: 20px;
-}
+    .slide {
+      min-width: 100%;
+      padding: 40px;
+      background: #1e293b;
+      border-radius: 20px;
+    }
 
-.buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  background: #38bdf8;
-  color: #000;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
+    .slide h3 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
 
-.buttons button:hover {
-  background: white;
-}
+    .buttons {
+      margin-top: 20px;
+    }
 
-/* Animations */
+    .buttons button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background: #38bdf8;
+      color: #000;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.8);}
-  to {opacity: 1; transform: scale(1);}
-}
+    .buttons button:hover {
+      background: white;
+    }
 
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+    /* Animations */
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
 
-.card{
-  background:#1e293b;
-  padding:30px;
-  border-radius:15px;
-  transition:0.4s;
-  opacity:0;
-  transform:translateY(50px);
-}
+    .card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(50px);
+    }
 
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 15px 30px rgba(0,0,0,0.4);
-}
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
 
-/* CONTACT */
-.contact{
-  text-align:center;
-}
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
 
-/* FOOTER */
-footer{
-  color: #fff;
-  text-align:center;
-  padding:20px;
-  background:#080e16;
-  height:30vh;
-}
+    /* FOOTER */
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      background: #080e16;
+      height: 30vh;
+    }
 
-/* ANIMATION CLASS */
-.show{
-  opacity:1 !important;
-  transform:translateY(0) !important;
-  transition:1s;
-}
+    /* ANIMATION CLASS */
+    .show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: 1s;
+    }
 
-/* .marquee container style */
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box; /* */
-}
+    /* .marquee container style */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      /* */
+    }
 
-.marquee-container span {
-  display: inline-block;
-  padding-left: 100%; /* Start off-screen to the right */
-  animation: marquee 20s linear infinite;
-  animation-delay: 3s; /* 3-second delay before the first loop starts */
-}
+    .marquee-container span {
+      display: inline-block;
+      padding-left: 100%;
+      /* Start off-screen to the right */
+      animation: marquee 20s linear infinite;
+      animation-delay: 3s;
+      /* 3-second delay before the first loop starts */
+    }
 
-.marquee {
-  color: #fff;
-}
+    .marquee {
+      color: #fff;
+    }
 
-#navbar h3{
-  color: #2a5298;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.skills {
-    color: #fff;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    border-radius:30px;
-}
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
+    #navbar h3 {
+      color: #2a5298;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 10px;
-}
-.pricings {
-    overflow-x: auto;
-}
+    .form-group {
+      margin-bottom: 15px;
+    }
 
-th, td {
-    padding: 5px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-th {
-    background-color: #3e75d3;
-    color:white;
-}
-@media only screen and(max-width: 768px) {
-  table {
-    font-size: 12px;
-  }
-}
-@media only screen and(max-width: 480px) {
-  table {
-    font-size: 10px;
-  }
-}
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
+    .skills {
+      color: #fff;
+    }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); /* Adjust as needed for content width */ }
-}
-</style>
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      border-radius: 30px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+    }
+
+    .pricings {
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3e75d3;
+      color: white;
+    }
+
+    @media only screen and(max-width: 768px) {
+      table {
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and(max-width: 480px) {
+      table {
+        font-size: 10px;
+      }
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+        /* Adjust as needed for content width */
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav id="navbar">
-  <h3>Memphis Software</h3>
-  <div>
-    <a href="#home" class="nav-link">Accueil</a>
-    <a href="#projects" class="nav-link">Projets</a>
-    <a href="#pricings" class="nav-link">Facturation</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </div>
-</nav>
+  <nav id="navbar">
+    <h3>Memphis Software</h3>
+    <div>
+      <a href="#home" class="nav-link">Accueil</a>
+      <a href="#propos" class="nav-link">A Propos</a>
+      <a href="#projects" class="nav-link">Projets</a>
+      <a href="#pricings" class="nav-link">Facturation</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
 
-<section class="hero" id="home">
-  <h3>Nous Accompagnons Vos Projets avec des  <span id="typing"></span></h3>
-  <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
-  <br />
-  <a href="#projects"><button class="btn-home">Voir Projets</button></a>
-  <br />
-  <span><p class="skills"> HTML | CSS | JavaScript | PHP | PYTHON | JAVA | MSQL | LARAVEL | WordPress </p></span>
-</section>
-<section id="projects">
+  <section class="hero" id="home">
+    <h3>Nous Accompagnons Vos Projets avec des <span id="typing"></span></h3>
+    <div class="marquee-container"><span>
+        <p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science
+          | Freelance </p>
+      </span></div>
+    <br />
+    <a href="#projects"><button class="btn-home">Voir Projets</button></a>
+    <br />
+    <span>
+      <p class="skills"> HTML | CSS | JavaScript | PHP | PYTHON | JAVA | MSQL | LARAVEL | WordPress </p>
+    </span>
+  </section>
+  <section id="propos">
+    <h3>A Propos</h3>
+    <P>Nous sommes une équipe de développeurs, pour la plupart Web. Nous sommes spécialisés dans la création
+      de solutions numériques sécurisées, évolutives, et orientées business.</P>
+    <div class="content">
+      <p>Notre travail va bien au-delà du simple développement :</P> 
+        <ul>
+      <li>Nous analysons les processus métier,
+        identifions les inefficacités et concevons des systèmes favorisant une croissance durable.</li>
+      <li> Qu'il s'agisse d'une
+        plateforme financière, d'un site web d'entreprise ou d'un logiciel SaaS, nous abordons chaque projet avec une
+        approche produit et une vision à long terme. </li>
+      <li>Nous accordons une grande importance à une architecture propre, à
+        la
+        performance et à la sécurité. </li>
+      <li>Pour notre équipe, la technologie doit simplifier les opérations, renforcer les marques et
+        avoir un impact concret, et non pas simplement exister pour être « moderne ».</li>
+      <li> Nous apprenons et perfectionnons constamment nos compétences, tout en explorant de nouvelles façons de créer des
+        produits numériques pertinents.</li>
+      <li> Nous souhaitons collaborer avec des entreprises
+        ambitieuses en quête de fiabilité, de clarté et d'une relation de confiance sur le long terme. </li>
+      </ul>
+      <br />
+    </div>
+  </section>
+
+  <section id="projects">
     <h3>Projets</h3>
     <P>Nos projets sont divers : ils vont du simple site vitrine aux applications plus complexes.</P>
-    <div class="content"> <p> Voici rapidement quelques-uns de nos projets : </p> 
-      <ul><li>Pharmabel fut notre premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
-        <br />
-        Visitez <a href="http://pharmabel.com/" class="content-link" target="_blank"> Pharmabel </a>
-      </li>
-    <li>Nous avons contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne pour le compte de la Chine. </li>
-    <li>Nous avons récemment développé et déployé, une application web-based avec Authentification multi-utilisateur, un système de gestion des clients d'une micro-finance. Ce projet web, développé avec le Framework Laravel-connu pour sa sécurité et sa robustesse- a servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
-      <b>=></b>Système sécurisé avec login et dashboard. <br />
-      <b>=></b> Architecture MVC. <br />
-      <b>=></b> MySQL. <br />
-      <b>=></b> logique métier personnalisé. <br />
-      <b>=></b> Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank"> https://juste-therock.github.io/#projects </a><br />
-      <b>=></b>Démonstration disponible sur demande</li>
-      <li>Nous travaillons actuellent sur un  yellow pages, carnet d'adresses utiles.</li>
-    </ul>
-    <br /></div>
-</section>
+    <div class="content">
+      <p> Voici rapidement quelques-uns de nos projets : </p>
+      <ul>
+        <li>Pharmabel fut notre premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
+          <br />
+          Visitez <a href="http://pharmabel.com/" class="content-link" target="_blank"> Pharmabel </a>
+        </li>
+        <li>Nous avons contribué quelques années plus tard au design de <a href="http://scienceoffice.com/"
+            class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne pour le
+          compte de la Chine. </li>
+        <li>Nous avons récemment développé et déployé, une application web-based avec Authentification
+          multi-utilisateur, un système de gestion des clients d'une micro-finance. Ce projet web, développé avec le
+          Framework Laravel-connu pour sa sécurité et sa robustesse- a servi de base à une réflexion sur les systèmes de
+          scoring et de paiement digital.<br />
+          <b>=></b>Système sécurisé avec login et dashboard. <br />
+          <b>=></b> Architecture MVC. <br />
+          <b>=></b> MySQL. <br />
+          <b>=></b> logique métier personnalisé. <br />
+          <b>=></b> Code maintenu et structuré. Code disponible à <a
+            href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank">
+            https://juste-therock.github.io/#projects </a><br />
+          <b>=></b>Démonstration disponible sur demande
+        </li>
+        <li>Nous travaillons actuellent sur un yellow pages, carnet d'adresses utiles.</li>
+      </ul>
+      <br />
+    </div>
+  </section>
 
-<section id="pricings">
-<h3>Facturation</h3><br />
-<p>Chaque projet est unique. Nos tarifs reflètent la qualité, la performance et la durabilité du travail livré. Nous vous proposons trois (3) packs, et sommes certains que vous y trouverez celui le plus adapté à vos besoins.</p>
+  <section id="pricings">
+    <h3>Facturation</h3><br />
+    <p>Chaque projet est unique. Nos tarifs reflètent la qualité, la performance et la durabilité du travail livré. Nous
+      vous proposons trois (3) packs, et sommes certains que vous y trouverez celui le plus adapté à vos besoins.</p>
     <div class="content">
       <h4>Nos differents packs:</h4><br />
       <div class="pricings">
@@ -405,7 +486,7 @@ textarea:focus {
               <td>A partir de 500 OOO FCFA</td>
               <td>4 semaines de travail, 3 mois de support</td>
             </tr> -->
-            <tr> 
+            <tr>
               <td>Premium</td>
               <td>Application sur mesure</td>
               <td>A discuter</td>
@@ -413,114 +494,117 @@ textarea:focus {
             </tr>
           </tbody>
         </table>
-    </div>
+      </div>
     </div>
   </section>
-<section id="contact" class="contact"> 
-  <h3>Contactez-nous</h3>
-  <p>Email: juste@menelic.com</p>
-  <p>Tél: (+229)0197358556</p>
-  <div class="content"><div class="contact-container">
-    <form action="#" method="POST">
-        <div class="form-group">
+  <section id="contact" class="contact">
+    <h3>Contactez-nous</h3>
+    <p>Email: juste@menelic.com</p>
+    <p>Tél: (+229)0197358556</p>
+    <div class="content">
+      <div class="contact-container">
+        <form action="#" method="POST">
+          <div class="form-group">
             <label for="name">Nom complet</label>
             <input type="text" id="name" name="name" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="email">Addresse Email</label>
             <input type="email" id="email" name="email" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="message">votre Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+          </div>
 
-        <button class="btn" type="submit">Envoyer Message</button>
+          <button class="btn" type="submit">Envoyer Message</button>
 
-    </form></div>
-</section>
+        </form>
+      </div>
+  </section>
 
-<footer>
-  © 2026 Juste Memphis Ahouansou | Tous droits réservés.
-</footer>
+  <footer>
+    © 2026 Juste Memphis Ahouansou | Tous droits réservés.
+  </footer>
 
-<script>
-// NAVBAR SCROLL EFFECT
-window.addEventListener("scroll",()=>{
-  document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50);
-});
-
-// TYPING EFFECT
-const text = "Solutions Numériques";
-let index = 0;
-function type(){
-  if(index < text.length){
-    document.getElementById("typing").innerHTML += text.charAt(index);
-    index++;
-    setTimeout(type,300);
-  }
-}
-type();
-
-// SCROLL REVEAL
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll",()=>{
-  const trigger = window.innerHeight / 1.2;
-  cards.forEach(card=>{
-    const top = card.getBoundingClientRect().top;
-    if(top < trigger){
-      card.classList.add("show");
-    }
-  });
-});
-
-// SMOOTH SCROLL
-document.querySelectorAll("nav a").forEach(anchor=>{
-  anchor.addEventListener("click",function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior:"smooth"
+  <script>
+    // NAVBAR SCROLL EFFECT
+    window.addEventListener("scroll", () => {
+      document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
     });
-  });
-});
 
-// ACTIVE LINK COLOR
-const navLink = document.querySelectorAll('.nav-link');
-navLink.forEach(link => {
-  link.addEventListener('click', () => {
-    // supprimer la classe active de tous les liens
-    navLink.forEach(l => l.classList.remove('active'));
-    // ajouter la classe active au lien cliqué
-    link.classList.add('active');
-  });
-});
+    // TYPING EFFECT
+    const text = "Solutions Numériques";
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 300);
+      }
+    }
+    type();
 
-// Sliders
+    // SCROLL REVEAL
+    const cards = document.querySelectorAll(".card");
 
-//let index = 0;
-const slides = document.getElementById("slides");
-const totalSlides = slides.children.length;
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight / 1.2;
+      cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < trigger) {
+          card.classList.add("show");
+        }
+      });
+    });
 
-function showSlide() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
-}
+    // SMOOTH SCROLL
+    document.querySelectorAll("nav a").forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
 
-function nextSlide() {
-  index = (index + 1) % totalSlides;
-  showSlide();
-}
+    // ACTIVE LINK COLOR
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach(link => {
+      link.addEventListener('click', () => {
+        // supprimer la classe active de tous les liens
+        navLink.forEach(l => l.classList.remove('active'));
+        // ajouter la classe active au lien cliqué
+        link.classList.add('active');
+      });
+    });
 
-function prevSlide() {
-  index = (index - 1 + totalSlides) % totalSlides;
-  showSlide();
-}
+    // Sliders
 
-// Auto slide
-setInterval(nextSlide, 4000);
-</script>
+    //let index = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      showSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      showSlide();
+    }
+
+    // Auto slide
+    setInterval(nextSlide, 4000);
+  </script>
 
 </body>
+
 </html>
