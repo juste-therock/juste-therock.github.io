@@ -146,6 +146,7 @@ section h2{
   width:100%;
   color: rgb(61, 53, 53);
   margin: 20px;
+  margin-left: 0px;
   padding: 20px 25px;
   border-radius:15px;
   border: 1px solid gray;
@@ -332,7 +333,7 @@ textarea:focus {
 <body>
 
 <nav id="navbar">
-  <h3>Memphis Ametovena</h3>
+  <h3>Memphis Software</h3>
   <div>
     <a href="#home" class="nav-link">Accueil</a>
     <a href="#projects" class="nav-link">Projets</a>
@@ -342,7 +343,7 @@ textarea:focus {
 </nav>
 
 <section class="hero" id="home">
-  <p>Salut, je suis <span id="typing"></span> Je suis programmeur</P>
+  <h3>Nous Accompagnons Vos Projets avec des  <span id="typing"></span></h3>
   <div class="marquee-container"><span><p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science | Freelance </p></span></div>
   <br />
   <a href="#projects"><button class="btn-home">Voir Projets</button></a>
@@ -351,57 +352,64 @@ textarea:focus {
 </section>
 <section id="projects">
     <h3>Projets</h3>
-    <div class="content"> <p> Ici, je vous présente rapidement quelques-uns de mes projets : </p> 
-      <ul><li>Pharmabel fut mon premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
+    <P>Nos projets sont divers : ils vont du simple site vitrine aux applications plus complexes.</P>
+    <div class="content"> <p> Voici rapidement quelques-uns de nos projets : </p> 
+      <ul><li>Pharmabel fut notre premier site internet, conçu en 2016 pour une pharmacie de la place ( Benin ).
         <br />
         Visitez <a href="http://pharmabel.com/" class="content-link" target="_blank"> Pharmabel </a>
       </li>
-    
-
-    <li>J'ai contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne pour le compte de la Chine. </li>
-    <li>J'ai récemment développé et déployé, un système de gestion des clients d'une micro-finance en Laravel. Projet web ayant servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
+    <li>Nous avons contribué quelques années plus tard au design de <a href="http://scienceoffice.com/" class="content-link" target="_blank">Science Office</a>, une application web de cours en ligne pour le compte de la Chine. </li>
+    <li>Nous avons récemment développé et déployé, une application web-based avec Authentification multi-utilisateur, un système de gestion des clients d'une micro-finance. Ce projet web, développé avec le Framework Laravel-connu pour sa sécurité et sa robustesse- a servi de base à une réflexion sur les systèmes de scoring et de paiement digital.<br /> 
       <b>=></b>Système sécurisé avec login et dashboard. <br />
       <b>=></b> Architecture MVC. <br />
       <b>=></b> MySQL. <br />
       <b>=></b> logique métier personnalisé. <br />
       <b>=></b> Code maintenu et structuré. Code disponible à <a href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank"> https://juste-therock.github.io/#projects </a><br />
       <b>=></b>Démonstration disponible sur demande</li>
-      <li>Je travaille actuellent sur mon yellow pages...</li>
+      <li>Nous travaillons actuellent sur un  yellow pages, carnet d'adresses utiles.</li>
     </ul>
     <br /></div>
 </section>
 
 <section id="pricings">
-<h3>Facturation</h3>
+<h3>Facturation</h3><br />
+<p>Chaque projet est unique. Nos tarifs reflètent la qualité, la performance et la durabilité du travail livré. Nous vous proposons trois (3) packs, et sommes certains que vous y trouverez celui le plus adapté à vos besoins.</p>
     <div class="content">
+      <h4>Nos differents packs:</h4><br />
       <div class="pricings">
         <table>
           <thead>
             <tr>
-              <th>Package</th>
-              <th>Description</th>
+              <th>Packs</th>
+              <th>Descriptions</th>
               <th>Tarifs</th>
               <th>Détails</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Site web de base</td>
-              <td>Conception et développement d'un site web de 5 pages</td>
-              <td>150 OOO FCFA</td>
-              <td>2 semaines de travail, 1 an de maintenance</td>
+              <td>Standard</td>
+              <td>Site Vitrine, 5 pages, Responsive design, Formulaire de contact, SEO de base.</td>
+              <td>A partir de 250 OOO FCFA</td>
+              <td>2 semaines de travail, 1 mois de support</td>
             </tr>
             <tr>
-              <td>Site web premium</td>
-              <td>Conception et développement d'un site web de 10 pages avec é-commerce</td>
-              <td>500 OOO FCFA</td>
-              <td>4 semaines de travail, 2 an de maintenance</td>
+              <td>Business</td>
+              <td>Site dynamique, Admin dashboard, Authentification, SEO avancé.</td>
+              <td>A partir de 600 OOO FCFA</td>
+              <td>4 semaines de travail, 2 mois de support</td>
             </tr>
-            <tr>
-              <td>Application web sur mesure</td>
-              <td>Conception et développement d'une application web personnalisée</td>
-              <td>800 OOO FCFA</td>
-              <td>8 semaines de travail, 1 an de maintenance</td>
+            <!-- <tr>
+              <td>E-commerce</td>
+              <td>E-commerce</td>
+              <td>A partir de 500 OOO FCFA</td>
+              <td>4 semaines de travail, 3 mois de support</td>
+            </tr> -->
+            <tr> 
+              <td>Premium</td>
+              <td>Application sur mesure</td>
+              <td>A discuter</td>
+              <td>A étudier, 3 mois de support</td>
             </tr>
           </tbody>
         </table>
@@ -409,8 +417,9 @@ textarea:focus {
     </div>
   </section>
 <section id="contact" class="contact"> 
-  <h3>Contactez-moi</h3>
+  <h3>Contactez-nous</h3>
   <p>Email: juste@menelic.com</p>
+  <p>Tél: (+229)0197358556</p>
   <div class="content"><div class="contact-container">
     <form action="#" method="POST">
         <div class="form-group">
@@ -444,13 +453,13 @@ window.addEventListener("scroll",()=>{
 });
 
 // TYPING EFFECT
-const text = "Juste Memphis AHOUANSOU.";
+const text = "Solutions Numériques";
 let index = 0;
 function type(){
   if(index < text.length){
     document.getElementById("typing").innerHTML += text.charAt(index);
     index++;
-    setTimeout(type,100);
+    setTimeout(type,300);
   }
 }
 type();
