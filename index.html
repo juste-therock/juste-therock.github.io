@@ -37,7 +37,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      padding: 20px 10%;
+      padding: 30px 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -67,9 +67,9 @@
       background-color: orange;
     }
 
-    .nav-link.active {
+    .menu.active {
       color: #2a5298;
-      background-color: beige;
+      background-color: white;
     }
 
     /* HERO */
@@ -285,9 +285,18 @@
     .marquee {
       color: #fff;
     }
+/* RESPONIVE NAVBAR */
+    #navbar {
+      color: #2a5298;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
 
     #navbar h3 {
       color: #2a5298;
+  
     }
 
     .form-group {
@@ -371,12 +380,12 @@
 
   <nav id="navbar">
     <h3>Memphis Software</h3>
-    <div>
-      <a href="#home" class="nav-link">Accueil</a>
-      <a href="#propos" class="nav-link">A Propos</a>
-      <a href="#projects" class="nav-link">Projets</a>
-      <a href="#pricings" class="nav-link">Facturation</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <div class="burger" onclick="toggleMenu()">
+      <span><a class="menu" href="#home">Accueil</a></span>
+      <span><a class="menu" href="#propos">A Propos</a></span>
+      <span><a class="menu" href="#projects">Projets</a></span>
+      <span><a class="menu" href="#pricings">Facturation</a></span>
+      <span><a class="menu" href="#contact">Contact</a></span>
     </div>
   </nav>
 
@@ -570,7 +579,7 @@
     });
 
     // ACTIVE LINK COLOR
-    const navLink = document.querySelectorAll('.nav-link');
+    const navLink = document.querySelectorAll('.menu');
     navLink.forEach(link => {
       link.addEventListener('click', () => {
         // supprimer la classe active de tous les liens
