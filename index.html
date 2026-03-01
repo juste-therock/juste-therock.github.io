@@ -440,8 +440,8 @@
           <b>=></b> MySQL. <br />
           <b>=></b> logique métier personnalisé. <br />
           <b>=></b> Code maintenu et structuré. Code disponible à <a
-            href="https://github.com/juste-therock/memphis-financial" class="content-link" target="_blank">
-            https://juste-therock.github.io/#projects </a><br />
+            href="https://github.com/memphis-software/memphis-fintech" class="content-link" target="_blank">
+            https://github.com/memphis-software/memphis-fintech </a><br />
           <b>=></b>Démonstration disponible sur demande
         </li>
         <li>Nous travaillons actuellent sur un yellow pages, carnet d'adresses utiles.</li>
@@ -518,7 +518,7 @@
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
 
-          <button class="btn" type="submit">Envoyer Message</button>
+          <button class="btn" onclick="sendMail()">Envoyer Message</button>
 
         </form>
       </div>
@@ -602,6 +602,17 @@
 
     // Auto slide
     setInterval(nextSlide, 4000);
+
+    // Send mail 
+    function sendMail() {
+      let name=document.getElementById('name').value;
+      let email=document.getElementById('email').value;
+      let message=document.getElementById('message').value;
+      let mail='mailto:juste@menelic.com?subject=Message from ${name}&body=${message}';
+      window.location.href=mail;
+    }
+
+
   </script>
 
 </body>
