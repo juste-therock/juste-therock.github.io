@@ -1,1 +1,2 @@
-This website tells about my skills
+Hello guys ! 
+I am Juste Ahouansou.
