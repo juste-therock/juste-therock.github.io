@@ -51,23 +51,82 @@
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
 
-    nav a {
-      color: #fff;
-      background-color: #2a5298;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 400;
-      transition: 0.3s;
-      border-radius: 20px;
-      padding: 5px 15px;
-    }
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
 
+#navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:#fff;
+  color:#007bff;
+}
+
+.logo{
+  font-size:20px;
+}
+
+/* Menu links */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a {
+  color:#fff;
+  background-color:#007bff;
+  padding: 8px 18px;
+  text-decoration:none;
+  font-size:16px;
+  border-radius: 15px;
+}
+
+.nav-links a:hover{
+  text-decoration:underline;
+}
+
+/* Burger */
+.burger{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* 🔥 Mobile */
+@media(max-width:768px){
+
+  .burger{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#fff;
+    flex-direction:column;
+    width:200px;
+    display:none;
+    padding:20px;
+    border-radius:0 0 0 10px;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+}
     nav a:hover {
       color: #fff;
       background-color: orange;
     }
 
-    .menu.active {
+    .nav-links.active {
       color: #2a5298;
       background-color: white;
     }
@@ -80,7 +139,7 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-      background-color: #2a5298;
+      background-color: #007bff;
       color: #fff;
     }
 
@@ -379,20 +438,27 @@
 <body>
 
   <nav id="navbar">
-    <h3>Memphis Software</h3>
+    <h3 class="logo">Memphis Software</h3>
+  
+    <!-- Burger icon -->
     <div class="burger" onclick="toggleMenu()">
-      <span><a class="menu" href="#home">Accueil</a></span>
-      <span><a class="menu" href="#propos">A Propos</a></span>
-      <span><a class="menu" href="#projects">Projets</a></span>
-      <span><a class="menu" href="#pricings">Facturation</a></span>
-      <span><a class="menu" href="#contact">Contact</a></span>
+      ☰
     </div>
+  
+    <!-- Menu links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#propos">À Propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#pricings">Facturation</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <section class="hero" id="home">
     <h3>Nous Créons des <span id="typing"></span></h3>
     <div class="marquee-container"><span>
-        <p class="marquee">web Design | Backend programming | Web app | SaaS | Payment System Integration | Data Science
+        <p class="marquee">web Design | Développement Backend | Développement WordPress  | Applications Web | SaaS | Intégration de Systemes de Paiement | Data Science
           | Freelance </p>
       </span></div>
     <br />
@@ -404,6 +470,7 @@
   </section>
   <section id="propos">
     <h3>A Propos</h3>
+    <br />
     <P>Nous sommes une équipe de développeurs, pour la plupart Web. Nous sommes spécialisés dans la création
       de solutions numériques sécurisées, évolutives, et orientées business.</P>
     <div class="content">
@@ -429,6 +496,7 @@
 
   <section id="projects">
     <h3>Projets</h3>
+    <br />
     <P>Nos projets sont divers : ils vont du simple site vitrine aux applications plus complexes.</P>
     <div class="content">
       <p> Voici rapidement quelques-uns de nos projets : </p>
@@ -543,8 +611,13 @@
       document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
     });
 
+ 
+ // Toggle hamburger menu
+    function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
+}
     // TYPING EFFECT
-    const text = "Solutions Numériques";
+    const text = "Solutions Digitales";
     let index = 0;
     function type() {
       if (index < text.length) {
@@ -579,7 +652,7 @@
     });
 
     // ACTIVE LINK COLOR
-    const navLink = document.querySelectorAll('.menu');
+    const navLink = document.querySelectorAll('.nav-links');
     navLink.forEach(link => {
       link.addEventListener('click', () => {
         // supprimer la classe active de tous les liens
